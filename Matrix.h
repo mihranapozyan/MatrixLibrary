@@ -42,8 +42,6 @@ public:
     // Access operator (for element access)
     T& operator()(std::size_t a_rows, std::size_t a_cols);
     const T& operator()(std::size_t a_rows, std::size_t a_cols) const;
-    T& operator[](std::size_t a_rows);
-    const T& operator[](std::size_t a_rows, std::size_t a_cols) const;
     // Input and Output stream operators
     friend std::istream& operator>>(std::istream& is, Matrix<T>& a_matrix) {
         for (std::size_t i = 0; i < a_matrix.m_rows; ++i) {
