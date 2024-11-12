@@ -104,18 +104,6 @@ const T &Matrix<T>::operator()(std::size_t a_rows, std::size_t a_cols) const {
 }
 
 template<typename T>
-T &Matrix<T>::operator[](std::size_t a_rows, std::size_t a_cols) {
-    // Accessor for modifying an element in the matrix
-    return m_data[a_rows][a_cols];
-}
-
-template<typename T>
-const T &Matrix<T>::operator[](std::size_t a_rows, std::size_t a_cols) const {
-    // Const accessor for reading an element in the matrix
-    return m_data[a_rows][a_cols];
-}
-
-template<typename T>
 Matrix<T> Matrix<T>::operator+(const Matrix &a_other) const {
     // Matrix addition: check if dimensions match, then perform element-wise addition
     checkDimensions(a_other);
